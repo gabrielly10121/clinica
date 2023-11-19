@@ -8,6 +8,6 @@ package com.mycompany.clinicamedica;
  *
  * @author Gabri
  */
-public class ClinicaMedica {
+class btnExcluir {
     
 }
