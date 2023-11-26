@@ -44,7 +44,7 @@ public class TelaLoginAgendamento extends javax.swing.JFrame {
 
         jToggleButton2.setText("jToggleButton1");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         TelaLogin.setBackground(new java.awt.Color(2, 115, 115));
 
@@ -95,9 +95,9 @@ public class TelaLoginAgendamento extends javax.swing.JFrame {
                         .addGroup(TelaLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(TelaLoginLayout.createSequentialGroup()
                                 .addComponent(txtLembrar, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 164, Short.MAX_VALUE)
                                 .addComponent(txtEsqueceuSenha))
-                            .addComponent(txtUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)
+                            .addComponent(txtUsuario)
                             .addComponent(txtSenha))
                         .addGap(204, 204, 204))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TelaLoginLayout.createSequentialGroup()
@@ -138,6 +138,7 @@ public class TelaLoginAgendamento extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtLembrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLembrarActionPerformed
