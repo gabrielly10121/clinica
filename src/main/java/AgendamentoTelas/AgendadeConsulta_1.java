@@ -1,5 +1,8 @@
 package AgendamentoTelas;
 
+import DaoAgendamento.AgendaConsultaDao;
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -253,9 +256,9 @@ public class AgendadeConsulta_1 extends javax.swing.JFrame {
                 .addGap(8, 8, 8)
                 .addComponent(btnSalvar)
                 .addGap(28, 28, 28)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2)
-                    .addComponent(txtPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -382,6 +385,10 @@ new Agendamento().setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_menuSairActionPerformed
 
     private void btnAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgendarActionPerformed
+        //validar campos
+        if(txtPaciente.getText().isEmpty()== true){
+            JOptionPane.showMessageDialog(null,"Campo paciente obrigatório, por favor preencha!");
+        }
         // botao Agendar
         txtPaciente.setEnabled(true);
         txtObervacao.setEnabled(true);
@@ -399,6 +406,10 @@ new Agendamento().setVisible(true);        // TODO add your handling code here:
         btnExcluir.setEnabled(false);
         btnCancelar.setEnabled(true);
         txtPaciente.setText(""); //Para deixar o campo nome limpo
+        
+        AgendaConsulta acd = new getnome 
+        AgendaConsultaDao acd = new AgendaConsultaDao();
+        acd.agendarConsulta(agendaConsulta);
     }//GEN-LAST:event_btnAgendarActionPerformed
 
     private void btnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarActionPerformed
