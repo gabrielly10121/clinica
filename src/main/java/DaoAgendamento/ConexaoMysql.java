@@ -16,7 +16,7 @@ public class ConexaoMysql {
     
     static String senha = "root";
 	static String usuario = "root";
-	static String host = "jdbc:mysql://localhost:3306/";
+	static String host = "jdbc:mysql://localhost:3306/ClinicaMedica";
 	
 	public static Connection getConnection() throws ClassNotFoundException, SQLException{
 		Class.forName("com.mysql.jdbc.Driver");
