@@ -13,7 +13,7 @@ import org.w3c.dom.Text;
 public class ProntuarioPaciente {
     
     private int registro;
-    private int registro_agenda;
+    private int registroAgenda;
     private Text historico;
     private Text receituario;
     private Text exame;
@@ -26,12 +26,12 @@ public class ProntuarioPaciente {
         this.registro = registro;
     }
 
-    public int getRegistro_agenda() {
-        return registro_agenda;
+    public int getRegistroAgenda() {
+        return registroAgenda;
     }
 
-    public void setRegistro_agenda(int registro_agenda) {
-        this.registro_agenda = registro_agenda;
+    public void setRegistroAgenda(int registroAgenda) {
+        this.registroAgenda = registroAgenda;
     }
 
     public Text getHistorico() {
@@ -70,13 +70,6 @@ public class ProntuarioPaciente {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    public int getregistro_agenda() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public int getregistro() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
     
     
 }

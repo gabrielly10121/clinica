@@ -4,7 +4,7 @@
  */
 package AgendamentoTelas;
 
-import DaoAgendamento.CadastroPacientesDao;
+import DaoAgendamento.PacientesDao;
 
 /**
  *
@@ -29,7 +29,7 @@ public class ClinicaMedica {
          CP.setMedico();
          CP.setTipoAtendimento();
         
-        new CadastroPacientesDao().CadastroPacientes(CP);
+        new PacientesDao().CadastroPacientes(CP);
     }
 
     private static CadastroPacientes CadastroPacientes() {

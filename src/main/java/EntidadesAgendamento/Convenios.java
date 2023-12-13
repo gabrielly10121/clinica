@@ -10,25 +10,25 @@ package EntidadesAgendamento;
  */
 public class Convenios {
     
-    private int codigo_convenio;
-    private String empresa_convenio;
+    private int CodigoConvenio;
+    private String EmpresaConvenio;
     private String cnpj;
     private String telefone;
 
-    public int getCodigo_convenio() {
-        return codigo_convenio;
+    public int getCodigoConvenio() {
+        return CodigoConvenio;
     }
 
-    public void setCodigo_convenio(int codigo_convenio) {
-        this.codigo_convenio = codigo_convenio;
+    public void setCodigoConvenio(int CodigoConvenio) {
+        this.CodigoConvenio = CodigoConvenio;
     }
 
-    public String getEmpresa_convenio() {
-        return empresa_convenio;
+    public String getEmpresaConvenio() {
+        return EmpresaConvenio;
     }
 
-    public void setEmpresa_convenio(String empresa_convenio) {
-        this.empresa_convenio = empresa_convenio;
+    public void setEmpresaConvenio(String EmpresaConvenio) {
+        this.EmpresaConvenio = EmpresaConvenio;
     }
 
     public String getCnpj() {
@@ -47,21 +47,7 @@ public class Convenios {
         this.telefone = telefone;
     }
 
-    public String getcodigo_convenio() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getempresa_convenio() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getcnpj() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String gettelefone() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    
     
     
 }

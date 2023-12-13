@@ -10,32 +10,26 @@ package EntidadesAgendamento;
  */
 public class Especialidades {
     
-    private int codigo_especialidade;
-    private String descricao_especialidade;
+    private int codigoEspecialidade;
+    private String descricaoEspecialidade;
 
-    public int getCodigo_especialidade() {
-        return codigo_especialidade;
+    public int getCodigoEspecialidade() {
+        return codigoEspecialidade;
     }
 
-    public void setCodigo_especialidade(int codigo_especialidade) {
-        this.codigo_especialidade = codigo_especialidade;
+    public void setCodigoEspecialidade(int codigoEspecialidade) {
+        this.codigoEspecialidade = codigoEspecialidade;
     }
 
-    public String getDescricao_especialidade() {
-        return descricao_especialidade;
+    public String getDescricaoEspecialidade() {
+        return descricaoEspecialidade;
     }
 
-    public void setDescricao_especialidade(String descricao_especialidade) {
-        this.descricao_especialidade = descricao_especialidade;
+    public void setDescricaoEspecialidade(String descricaoEspecialidade) {
+        this.descricaoEspecialidade = descricaoEspecialidade;
     }
 
-    public String getcodigo_especialidade() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getdescricao_especialidade() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    
     
     
     

@@ -12,11 +12,11 @@ import java.util.Date;
  */
 public class Funcionario {
     
-    private int codigo_funcionario;
-        private String nome_completo;
-        private String numero_rg;
-        private String orgao_emissor;
-        private String numero_cpf;
+    private int codigoFuncionario;
+        private String nomeCompleto;
+        private String numeroRg;
+        private String orgaoEmissor;
+        private String numeroCpf;
         private String endereco;
         private String numero;
         private String complemento;
@@ -25,48 +25,48 @@ public class Funcionario {
         private String estado;
         private String telefone;
         private String celular;
-        private String numero_ctps;
-        private String numero_pis;
-        private Date data_nascimento;
+        private String numeroCtps;
+        private String numeroPis;
+        private Date dataNascimento;
 
-    public int getCodigo_funcionario() {
-        return codigo_funcionario;
+    public int getCodigoFuncionario() {
+        return codigoFuncionario;
     }
 
-    public void setCodigo_funcionario(int codigo_funcionario) {
-        this.codigo_funcionario = codigo_funcionario;
+    public void setCodigoFuncionario(int codigoFuncionario) {
+        this.codigoFuncionario = codigoFuncionario;
     }
 
-    public String getNome_completo() {
-        return nome_completo;
+    public String getNomeCompleto() {
+        return nomeCompleto;
     }
 
-    public void setNome_completo(String nome_completo) {
-        this.nome_completo = nome_completo;
+    public void setNomeCompleto(String nomeCompleto) {
+        this.nomeCompleto = nomeCompleto;
     }
 
-    public String getNumero_rg() {
-        return numero_rg;
+    public String getNumeroRg() {
+        return numeroRg;
     }
 
-    public void setNumero_rg(String numero_rg) {
-        this.numero_rg = numero_rg;
+    public void setNumeroRg(String numeroRg) {
+        this.numeroRg = numeroRg;
     }
 
-    public String getOrgao_emissor() {
-        return orgao_emissor;
+    public String getOrgaoEmissor() {
+        return orgaoEmissor;
     }
 
-    public void setOrgao_emissor(String orgao_emissor) {
-        this.orgao_emissor = orgao_emissor;
+    public void setOrgaoEmissor(String orgaoEmissor) {
+        this.orgaoEmissor = orgaoEmissor;
     }
 
-    public String getNumero_cpf() {
-        return numero_cpf;
+    public String getNumeroCpf() {
+        return numeroCpf;
     }
 
-    public void setNumero_cpf(String numero_cpf) {
-        this.numero_cpf = numero_cpf;
+    public void setNumeroCpf(String numeroCpf) {
+        this.numeroCpf = numeroCpf;
     }
 
     public String getEndereco() {
@@ -133,93 +133,30 @@ public class Funcionario {
         this.celular = celular;
     }
 
-    public String getNumero_ctps() {
-        return numero_ctps;
+    public String getNumeroCtps() {
+        return numeroCtps;
     }
 
-    public void setNumero_ctps(String numero_ctps) {
-        this.numero_ctps = numero_ctps;
+    public void setNumeroCtps(String numeroCtps) {
+        this.numeroCtps = numeroCtps;
     }
 
-    public String getNumero_pis() {
-        return numero_pis;
+    public String getNumeroPis() {
+        return numeroPis;
     }
 
-    public void setNumero_pis(String numero_pis) {
-        this.numero_pis = numero_pis;
+    public void setNumeroPis(String numeroPis) {
+        this.numeroPis = numeroPis;
     }
 
-    public Date getData_nascimento() {
-        return data_nascimento;
+    public Date getDataNascimento() {
+        return dataNascimento;
     }
 
-    public void setData_nascimento(Date data_nascimento) {
-        this.data_nascimento = data_nascimento;
+    public void setDataNascimento(Date dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
-    public String getcodigo_funcionario() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getnome_completo() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getnumero_rg() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getorgao_emissor() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getnumero_cpf() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getendereco() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getnumero() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getcomplemento() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getbairro() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getcidade() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getestado() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String gettelefone() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getcelular() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getnumero_ctps() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getnumero_pis() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public java.sql.Date getdata_nascimento() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-        
+    
         
 }

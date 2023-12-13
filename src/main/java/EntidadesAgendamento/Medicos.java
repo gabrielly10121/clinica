@@ -10,33 +10,33 @@ package EntidadesAgendamento;
  */
 public class Medicos {
     
-    private int codigo_medico;
-    private String nome_medico;
-    private int codigo_especialidade;
+    private int codigoMedico;
+    private String nomeMedico;
+    private int codigoEspecialidade;
     private String crm;
 
-    public int getCodigo_medico() {
-        return codigo_medico;
+    public int getCodigoMedico() {
+        return codigoMedico;
     }
 
-    public void setCodigo_medico(int codigo_medico) {
-        this.codigo_medico = codigo_medico;
+    public void setCodigoMedico(int codigoMedico) {
+        this.codigoMedico = codigoMedico;
     }
 
-    public String getNome_medico() {
-        return nome_medico;
+    public String getNomeMedico() {
+        return nomeMedico;
     }
 
-    public void setNome_medico(String nome_medico) {
-        this.nome_medico = nome_medico;
+    public void setNomeMedico(String nomeMedico) {
+        this.nomeMedico = nomeMedico;
     }
 
-    public int getCodigo_especialidade() {
-        return codigo_especialidade;
+    public int getCodigoEspecialidade() {
+        return codigoEspecialidade;
     }
 
-    public void setCodigo_especialidade(int codigo_especialidade) {
-        this.codigo_especialidade = codigo_especialidade;
+    public void setCodigoEspecialidade(int codigoEspecialidade) {
+        this.codigoEspecialidade = codigoEspecialidade;
     }
 
     public String getCrm() {
@@ -47,21 +47,6 @@ public class Medicos {
         this.crm = crm;
     }
 
-    public String getcodigo_medico() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getnome_medico() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getcodigo_especialidade() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getcrm() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
     
     
     

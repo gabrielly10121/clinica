@@ -6,19 +6,17 @@ package EntidadesAgendamento;
 
 import java.util.Date;
 
-
 /**
  *
  * @author Gabri
  */
 public class Paciente {
-    
-    
-    private int codigo_paciente;
+
+    private int codigoPaciente;
     private String nome;
-    private String numero_rg;
-    private String orgao_emissor;
-    private String numero_cpf;
+    private String numeroRg;
+    private String orgaoEmissor;
+    private String numeroCpf;
     private String endereco;
     private String numero;
     private String complemento;
@@ -27,18 +25,18 @@ public class Paciente {
     private String estado;
     private String telefone;
     private String celular;
-    private Date data_nascimento;
+    private Date dataNascimento;
     private String sexo;
-    private String tem_convenio;
-    private int cod_convenio;
-    private String senha_acesso;
+    private String temConvenio;
+    private int codConvenio;
+    private String senhaAcesso;
 
-    public int getCodigo_paciente() {
-        return codigo_paciente;
+    public int getCodigoPaciente() {
+        return codigoPaciente;
     }
 
-    public void setCodigo_paciente(int codigo_paciente) {
-        this.codigo_paciente = codigo_paciente;
+    public void setCodigoPaciente(int codigoPaciente) {
+        this.codigoPaciente = codigoPaciente;
     }
 
     public String getNome() {
@@ -49,28 +47,28 @@ public class Paciente {
         this.nome = nome;
     }
 
-    public String getNumero_rg() {
-        return numero_rg;
+    public String getNumeroRg() {
+        return numeroRg;
     }
 
-    public void setNumero_rg(String numero_rg) {
-        this.numero_rg = numero_rg;
+    public void setNumeroRg(String numeroRg) {
+        this.numeroRg = numeroRg;
     }
 
-    public String getOrgao_emissor() {
-        return orgao_emissor;
+    public String getOrgaoEmissor() {
+        return orgaoEmissor;
     }
 
-    public void setOrgao_emissor(String orgao_emissor) {
-        this.orgao_emissor = orgao_emissor;
+    public void setOrgaoEmissor(String orgaoEmissor) {
+        this.orgaoEmissor = orgaoEmissor;
     }
 
-    public String getNumero_cpf() {
-        return numero_cpf;
+    public String getNumeroCpf() {
+        return numeroCpf;
     }
 
-    public void setNumero_cpf(String numero_cpf) {
-        this.numero_cpf = numero_cpf;
+    public void setNumeroCpf(String numeroCpf) {
+        this.numeroCpf = numeroCpf;
     }
 
     public String getEndereco() {
@@ -137,12 +135,12 @@ public class Paciente {
         this.celular = celular;
     }
 
-    public Date getData_nascimento() {
-        return data_nascimento;
+    public Date getDataNascimento() {
+        return dataNascimento;
     }
 
-    public void setData_nascimento(Date data_nascimento) {
-        this.data_nascimento = data_nascimento;
+    public void setDataNascimento(Date dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public String getSexo() {
@@ -153,101 +151,28 @@ public class Paciente {
         this.sexo = sexo;
     }
 
-    public String getTem_convenio() {
-        return tem_convenio;
+    public String getTemConvenio() {
+        return temConvenio;
     }
 
-    public void setTem_convenio(String tem_convenio) {
-        this.tem_convenio = tem_convenio;
+    public void setTemConvenio(String temConvenio) {
+        this.temConvenio = temConvenio;
     }
 
-    public int getCod_convenio() {
-        return cod_convenio;
+    public int getCodConvenio() {
+        return codConvenio;
     }
 
-    public void setCod_convenio(int cod_convenio) {
-        this.cod_convenio = cod_convenio;
+    public void setCodConvenio(int codConvenio) {
+        this.codConvenio = codConvenio;
     }
 
-    public String getSenha_acesso() {
-        return senha_acesso;
+    public String getSenhaAcesso() {
+        return senhaAcesso;
     }
 
-    public void setSenha_acesso(String senha_acesso) {
-        this.senha_acesso = senha_acesso;
+    public void setSenhaAcesso(String senhaAcesso) {
+        this.senhaAcesso = senhaAcesso;
     }
 
-    public String getcodigo_paciente() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getnome() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getnumero_rg() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getorgao_emissor() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getnumero_cpf() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getendereco() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getnumero() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getcomplemento() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getbairro() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getcidade() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getestado() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String gettelefone() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getcelular() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getdata_nascimento() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getsexo() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String gettem_convenio() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getcod_convenio() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getsenha_acesso() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-   
-    
 }

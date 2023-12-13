@@ -45,46 +45,46 @@ public class AgendaConsulta {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
-    private int registro_agenda;
-    private int codigo_usuario;
-    private int codigo_paciente;
-    private int codigo_medico;
+    private int registroAgenda;
+    private int codigoUsuario;
+    private int codigoPaciente;
+    private int codigoMedico;
     private Date data;
     private String hora;
     private String retorno;
     private String cancelado;
-    private Text motivo_cancelamento;
+    private Text motivoCancelamento;
 
-    public int getRegistro_agenda() {
-        return registro_agenda;
+    public int getRegistroAgenda() {
+        return registroAgenda;
     }
 
-    public void setRegistro_agenda(int registro_agenda) {
-        this.registro_agenda = registro_agenda;
+    public void setRegistroAgenda(int registroAgenda) {
+        this.registroAgenda = registroAgenda;
     }
 
-    public int getCodigo_usuario() {
-        return codigo_usuario;
+    public int getCodigoUsuario() {
+        return codigoUsuario;
     }
 
-    public void setCodigo_usuario(int codigo_usuario) {
-        this.codigo_usuario = codigo_usuario;
+    public void setCodigoUsuario(int codigoUsuario) {
+        this.codigoUsuario = codigoUsuario;
     }
 
-    public int getCodigo_paciente() {
-        return codigo_paciente;
+    public int getCodigoPaciente() {
+        return codigoPaciente;
     }
 
-    public void setCodigo_paciente(int codigo_paciente) {
-        this.codigo_paciente = codigo_paciente;
+    public void setCodigoPaciente(int codigoPaciente) {
+        this.codigoPaciente = codigoPaciente;
     }
 
-    public int getCodigo_medico() {
-        return codigo_medico;
+    public int getCodigoMedico() {
+        return codigoMedico;
     }
 
-    public void setCodigo_medico(int codigo_medico) {
-        this.codigo_medico = codigo_medico;
+    public void setCodigoMedico(int codigoMedico) {
+        this.codigoMedico = codigoMedico;
     }
 
     public Date getData() {
@@ -119,13 +119,14 @@ public class AgendaConsulta {
         this.cancelado = cancelado;
     }
 
-    public Text getMotivo_cancelamento() {
-        return motivo_cancelamento;
+    public Text getMotivoCancelamento() {
+        return motivoCancelamento;
     }
 
-    public void setMotivo_cancelamento(Text motivo_cancelamento) {
-        this.motivo_cancelamento = motivo_cancelamento;
+    public void setMotivoCancelamento(Text motivoCancelamento) {
+        this.motivoCancelamento = motivoCancelamento;
     }
+
     
     
     
