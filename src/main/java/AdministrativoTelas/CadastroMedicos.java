@@ -73,13 +73,10 @@ public class CadastroMedicos extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
         jLabel4.setText("CRM");
 
-        jTextField1.setBackground(new java.awt.Color(2, 115, 115));
         jTextField1.setBorder(new javax.swing.border.MatteBorder(null));
 
-        jTextField2.setBackground(new java.awt.Color(2, 115, 115));
         jTextField2.setBorder(new javax.swing.border.MatteBorder(null));
 
-        jTextField3.setBackground(new java.awt.Color(2, 115, 115));
         jTextField3.setBorder(new javax.swing.border.MatteBorder(null));
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,19 +84,15 @@ public class CadastroMedicos extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(2, 115, 115));
         jButton1.setText("CADASTRAR");
         jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton2.setBackground(new java.awt.Color(2, 115, 115));
         jButton2.setText("EXCLUIR");
         jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton3.setBackground(new java.awt.Color(2, 115, 115));
         jButton3.setText("SALVAR");
         jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jButton4.setBackground(new java.awt.Color(2, 115, 115));
         jButton4.setText("ALTERAR");
         jButton4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 

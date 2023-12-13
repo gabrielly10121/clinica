@@ -10,12 +10,12 @@ import javax.swing.JOptionPane;
  *
  * @author Gabri
  */
-public class TelaLoginAgendamento extends javax.swing.JFrame {
+public class UmTelaLoginAgendamento extends javax.swing.JFrame {
 
     /**
      * Creates new form TelaLoginAgendamento
      */
-    public TelaLoginAgendamento() {
+    public UmTelaLoginAgendamento() {
         initComponents();
     }
 
@@ -142,7 +142,9 @@ public class TelaLoginAgendamento extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtLembrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLembrarActionPerformed
-        // TODO add your handling code here:
+        
+       
+       
 txtLembrar.addActionListener((java.awt.event.ActionEvent evt1) -> {
     // Coloque aqui o código que deve ser executado quando o checkbox "Lembrar-me" for selecionado ou desmarcado
     if(txtLembrar.isSelected()){
@@ -157,7 +159,7 @@ txtLembrar.addActionListener((java.awt.event.ActionEvent evt1) -> {
         // TODO add your handling code here:
         if(txtUsuario.getText().equals("primeiro_acesso") && txtSenha.getText().equals("123")){
             JOptionPane.showMessageDialog(null,"Acesso liberado");
-            new Agendamento().setVisible(true);
+            new DoisAgendamento().setVisible(true);
         }else{
             JOptionPane.showMessageDialog(null,"Usuário ou senha inválidos!");
         }
@@ -188,20 +190,21 @@ txtLembrar.addActionListener((java.awt.event.ActionEvent evt1) -> {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaLoginAgendamento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UmTelaLoginAgendamento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaLoginAgendamento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UmTelaLoginAgendamento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaLoginAgendamento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UmTelaLoginAgendamento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaLoginAgendamento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(UmTelaLoginAgendamento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaLoginAgendamento().setVisible(true);
+                new UmTelaLoginAgendamento().setVisible(true);
             }
         });
     }

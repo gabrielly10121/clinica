@@ -8,12 +8,12 @@ package AgendamentoTelas;
  *
  * @author Gabri
  */
-public class RegistrodeRetorno extends javax.swing.JFrame {
+public class SeisCancelamentodeConsulta extends javax.swing.JFrame {
 
     /**
-     * Creates new form RegistrodeRetorno
+     * Creates new form CancelamentodeConsulta
      */
-    public RegistrodeRetorno() {
+    public SeisCancelamentodeConsulta() {
         initComponents();
     }
 
@@ -26,24 +26,6 @@ public class RegistrodeRetorno extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuBar2 = new javax.swing.JMenuBar();
-        txtAdministrativo = new javax.swing.JMenu();
-        menuCadastroFuncionarios = new javax.swing.JMenuItem();
-        menuCadastroUsuarios = new javax.swing.JMenuItem();
-        menuCadastroEspecialidades = new javax.swing.JMenuItem();
-        menuCadastroMedicos = new javax.swing.JMenuItem();
-        menuCadastroConvenios = new javax.swing.JMenuItem();
-        txtAgendamento = new javax.swing.JMenu();
-        menuCadastroPaciente = new javax.swing.JMenuItem();
-        menuAgendarConsulta = new javax.swing.JMenuItem();
-        menuRegistroRetorno = new javax.swing.JMenuItem();
-        menuCancelamentoConsulta = new javax.swing.JMenuItem();
-        txtAtendimento = new javax.swing.JMenu();
-        menuProntuarioPaciente = new javax.swing.JMenuItem();
-        menuRegistroAtendimento = new javax.swing.JMenuItem();
-        menuReceituario = new javax.swing.JMenuItem();
-        menuExames = new javax.swing.JMenuItem();
-        menuSair = new javax.swing.JMenu();
         jPanel1 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         txtAdministrativo1 = new javax.swing.JMenu();
@@ -57,77 +39,17 @@ public class RegistrodeRetorno extends javax.swing.JFrame {
         menuAgendarConsulta1 = new javax.swing.JMenuItem();
         menuRegistroRetorno1 = new javax.swing.JMenuItem();
         menuCancelamentoConsulta1 = new javax.swing.JMenuItem();
+        txtAgendamento2 = new javax.swing.JMenu();
+        menuCadastroPaciente2 = new javax.swing.JMenuItem();
+        menuAgendarConsulta2 = new javax.swing.JMenuItem();
+        menuRegistroRetorno2 = new javax.swing.JMenuItem();
+        menuCancelamentoConsulta2 = new javax.swing.JMenuItem();
         txtAtendimento1 = new javax.swing.JMenu();
         menuProntuarioPaciente1 = new javax.swing.JMenuItem();
         menuRegistroAtendimento1 = new javax.swing.JMenuItem();
         menuReceituario1 = new javax.swing.JMenuItem();
         menuExames1 = new javax.swing.JMenuItem();
         menuSair1 = new javax.swing.JMenu();
-
-        txtAdministrativo.setText("Administrativo");
-
-        menuCadastroFuncionarios.setText("Cadastro de Funcionários");
-        menuCadastroFuncionarios.setToolTipText("");
-        txtAdministrativo.add(menuCadastroFuncionarios);
-
-        menuCadastroUsuarios.setText("Cadastro de Usuários");
-        txtAdministrativo.add(menuCadastroUsuarios);
-
-        menuCadastroEspecialidades.setText("Cadastro de Especialidades");
-        txtAdministrativo.add(menuCadastroEspecialidades);
-
-        menuCadastroMedicos.setText("Cadastro de Médicos");
-        txtAdministrativo.add(menuCadastroMedicos);
-
-        menuCadastroConvenios.setText("Cadastro de Convênios");
-        txtAdministrativo.add(menuCadastroConvenios);
-
-        jMenuBar2.add(txtAdministrativo);
-
-        txtAgendamento.setText("Agendamento");
-
-        menuCadastroPaciente.setText("Cadastro de Pacientes");
-        menuCadastroPaciente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuCadastroPacienteActionPerformed(evt);
-            }
-        });
-        txtAgendamento.add(menuCadastroPaciente);
-
-        menuAgendarConsulta.setText("Agenda de Consulta");
-        txtAgendamento.add(menuAgendarConsulta);
-
-        menuRegistroRetorno.setText("Registro de Retorno");
-        txtAgendamento.add(menuRegistroRetorno);
-
-        menuCancelamentoConsulta.setText("Cancelamento de Consulta");
-        txtAgendamento.add(menuCancelamentoConsulta);
-
-        jMenuBar2.add(txtAgendamento);
-
-        txtAtendimento.setText("Atendimento");
-
-        menuProntuarioPaciente.setText("Prontuário do Paciente");
-        txtAtendimento.add(menuProntuarioPaciente);
-
-        menuRegistroAtendimento.setText("Registro de Atendimento");
-        txtAtendimento.add(menuRegistroAtendimento);
-
-        menuReceituario.setText("Receituário");
-        txtAtendimento.add(menuReceituario);
-
-        menuExames.setText("Exames");
-        txtAtendimento.add(menuExames);
-
-        jMenuBar2.add(txtAtendimento);
-
-        menuSair.setText("Sair");
-        menuSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuSairActionPerformed(evt);
-            }
-        });
-        jMenuBar2.add(menuSair);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -137,11 +59,11 @@ public class RegistrodeRetorno extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1099, Short.MAX_VALUE)
+            .addGap(0, 1096, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 608, Short.MAX_VALUE)
+            .addGap(0, 602, Short.MAX_VALUE)
         );
 
         txtAdministrativo1.setText("Administrativo");
@@ -162,8 +84,6 @@ public class RegistrodeRetorno extends javax.swing.JFrame {
         menuCadastroConvenios1.setText("Cadastro de Convênios");
         txtAdministrativo1.add(menuCadastroConvenios1);
 
-        jMenuBar1.add(txtAdministrativo1);
-
         txtAgendamento1.setText("Agendamento");
 
         menuCadastroPaciente1.setText("Cadastro de Pacientes");
@@ -183,7 +103,30 @@ public class RegistrodeRetorno extends javax.swing.JFrame {
         menuCancelamentoConsulta1.setText("Cancelamento de Consulta");
         txtAgendamento1.add(menuCancelamentoConsulta1);
 
-        jMenuBar1.add(txtAgendamento1);
+        txtAdministrativo1.add(txtAgendamento1);
+
+        jMenuBar1.add(txtAdministrativo1);
+
+        txtAgendamento2.setText("Agendamento");
+
+        menuCadastroPaciente2.setText("Cadastro de Pacientes");
+        menuCadastroPaciente2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuCadastroPaciente2ActionPerformed(evt);
+            }
+        });
+        txtAgendamento2.add(menuCadastroPaciente2);
+
+        menuAgendarConsulta2.setText("Agenda de Consulta");
+        txtAgendamento2.add(menuAgendarConsulta2);
+
+        menuRegistroRetorno2.setText("Registro de Retorno");
+        txtAgendamento2.add(menuRegistroRetorno2);
+
+        menuCancelamentoConsulta2.setText("Cancelamento de Consulta");
+        txtAgendamento2.add(menuCancelamentoConsulta2);
+
+        jMenuBar1.add(txtAgendamento2);
 
         txtAtendimento1.setText("Atendimento");
 
@@ -226,18 +169,13 @@ public class RegistrodeRetorno extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void menuCadastroPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadastroPacienteActionPerformed
-        new CadastrodePacientes().setVisible(true);
-    }//GEN-LAST:event_menuCadastroPacienteActionPerformed
-
-    private void menuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSairActionPerformed
-        // Menu Sair
-        this.dispose();
-    }//GEN-LAST:event_menuSairActionPerformed
-
     private void menuCadastroPaciente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadastroPaciente1ActionPerformed
-        new CadastrodePacientes().setVisible(true);
+        new TresCadastroDePaciente().setVisible(true);
     }//GEN-LAST:event_menuCadastroPaciente1ActionPerformed
+
+    private void menuCadastroPaciente2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadastroPaciente2ActionPerformed
+        new TresCadastroDePaciente().setVisible(true);
+    }//GEN-LAST:event_menuCadastroPaciente2ActionPerformed
 
     private void menuSair1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSair1ActionPerformed
         // Menu Sair
@@ -261,61 +199,49 @@ public class RegistrodeRetorno extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RegistrodeRetorno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SeisCancelamentodeConsulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RegistrodeRetorno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SeisCancelamentodeConsulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RegistrodeRetorno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SeisCancelamentodeConsulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RegistrodeRetorno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SeisCancelamentodeConsulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RegistrodeRetorno().setVisible(true);
+                new SeisCancelamentodeConsulta().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JMenuItem menuAgendarConsulta;
     private javax.swing.JMenuItem menuAgendarConsulta1;
-    private javax.swing.JMenuItem menuCadastroConvenios;
+    private javax.swing.JMenuItem menuAgendarConsulta2;
     private javax.swing.JMenuItem menuCadastroConvenios1;
-    private javax.swing.JMenuItem menuCadastroEspecialidades;
     private javax.swing.JMenuItem menuCadastroEspecialidades1;
-    private javax.swing.JMenuItem menuCadastroFuncionarios;
     private javax.swing.JMenuItem menuCadastroFuncionarios1;
-    private javax.swing.JMenuItem menuCadastroMedicos;
     private javax.swing.JMenuItem menuCadastroMedicos1;
-    private javax.swing.JMenuItem menuCadastroPaciente;
     private javax.swing.JMenuItem menuCadastroPaciente1;
-    private javax.swing.JMenuItem menuCadastroUsuarios;
+    private javax.swing.JMenuItem menuCadastroPaciente2;
     private javax.swing.JMenuItem menuCadastroUsuarios1;
-    private javax.swing.JMenuItem menuCancelamentoConsulta;
     private javax.swing.JMenuItem menuCancelamentoConsulta1;
-    private javax.swing.JMenuItem menuExames;
+    private javax.swing.JMenuItem menuCancelamentoConsulta2;
     private javax.swing.JMenuItem menuExames1;
-    private javax.swing.JMenuItem menuProntuarioPaciente;
     private javax.swing.JMenuItem menuProntuarioPaciente1;
-    private javax.swing.JMenuItem menuReceituario;
     private javax.swing.JMenuItem menuReceituario1;
-    private javax.swing.JMenuItem menuRegistroAtendimento;
     private javax.swing.JMenuItem menuRegistroAtendimento1;
-    private javax.swing.JMenuItem menuRegistroRetorno;
     private javax.swing.JMenuItem menuRegistroRetorno1;
-    private javax.swing.JMenu menuSair;
+    private javax.swing.JMenuItem menuRegistroRetorno2;
     private javax.swing.JMenu menuSair1;
-    private javax.swing.JMenu txtAdministrativo;
     private javax.swing.JMenu txtAdministrativo1;
-    private javax.swing.JMenu txtAgendamento;
     private javax.swing.JMenu txtAgendamento1;
-    private javax.swing.JMenu txtAtendimento;
+    private javax.swing.JMenu txtAgendamento2;
     private javax.swing.JMenu txtAtendimento1;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,6 +4,7 @@
  */
 package DaoAgendamento;
 
+import Extras.CadastroPacientes;
 import EntidadesAgendamento.Paciente;
 import java.sql.Connection;
 import java.sql.Date;
@@ -16,6 +17,10 @@ import java.sql.SQLException;
  * @author Gabri
  */
 public class PacientesDao {
+
+    public void CadastroPacientes(CadastroPacientes CP) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 
     public class PacienteDao {
 
