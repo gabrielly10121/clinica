@@ -22,6 +22,14 @@ public class PacientesDao {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
+    /**
+     *
+     * @param CP
+     */
+    public void Paciente(CadastroPacientes CP) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     public class PacienteDao {
 
         
