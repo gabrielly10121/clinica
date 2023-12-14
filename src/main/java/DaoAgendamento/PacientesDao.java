@@ -4,7 +4,7 @@
  */
 package DaoAgendamento;
 
-import Extras.CadastroPacientes;
+
 import EntidadesAgendamento.Paciente;
 import java.sql.Connection;
 import java.sql.Date;

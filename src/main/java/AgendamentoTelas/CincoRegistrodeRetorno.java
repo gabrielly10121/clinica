@@ -4,6 +4,12 @@
  */
 package AgendamentoTelas;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Gabri
@@ -53,36 +59,15 @@ public class CincoRegistrodeRetorno extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        txtMotivoRetorno = new javax.swing.JTextField();
+        txtDetalheUltimaConsulta = new javax.swing.JTextField();
+        txtResultadoExames = new javax.swing.JTextField();
+        txtCodPaciente = new javax.swing.JTextField();
+        txtName = new javax.swing.JTextField();
+        txtData = new javax.swing.JTextField();
+        txtHora = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        txtAdministrativo1 = new javax.swing.JMenu();
-        menuCadastroFuncionarios1 = new javax.swing.JMenuItem();
-        menuCadastroUsuarios1 = new javax.swing.JMenuItem();
-        menuCadastroEspecialidades1 = new javax.swing.JMenuItem();
-        menuCadastroMedicos1 = new javax.swing.JMenuItem();
-        menuCadastroConvenios1 = new javax.swing.JMenuItem();
-        txtAgendamento1 = new javax.swing.JMenu();
-        menuCadastroPaciente1 = new javax.swing.JMenuItem();
-        menuAgendarConsulta1 = new javax.swing.JMenuItem();
-        menuRegistroRetorno1 = new javax.swing.JMenuItem();
-        menuCancelamentoConsulta1 = new javax.swing.JMenuItem();
-        txtAtendimento1 = new javax.swing.JMenu();
-        menuProntuarioPaciente1 = new javax.swing.JMenuItem();
-        menuRegistroAtendimento1 = new javax.swing.JMenuItem();
-        menuReceituario1 = new javax.swing.JMenuItem();
-        menuExames1 = new javax.swing.JMenuItem();
+        jButton1 = new javax.swing.JButton();
 
         txtAdministrativo.setText("Administrativo");
 
@@ -177,17 +162,7 @@ public class CincoRegistrodeRetorno extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         jLabel8.setText("Detalhes Da Última Consulta");
 
-        jTextField5.setToolTipText("");
-
-        jButton1.setText("REGISTRAR");
-
-        jButton2.setText("ALTERAR");
-
-        jButton3.setText("EXCLUIR");
-
-        jButton4.setText("CANCELAR");
-
-        jButton5.setText("SALVAR");
+        txtName.setToolTipText("");
 
         jButton6.setText("SAIR");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -196,10 +171,24 @@ public class CincoRegistrodeRetorno extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        jButton1.setText("SALVAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(317, 317, 317)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 239, Short.MAX_VALUE)
+                .addComponent(jButton6)
+                .addGap(198, 198, 198))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -208,49 +197,35 @@ public class CincoRegistrodeRetorno extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField5))
+                                .addComponent(txtName))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 545, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(txtCodPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 545, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtData, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(172, 172, 172)
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(38, 38, 38)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtHora, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jButton1)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtResultadoExames, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtMotivoRetorno, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDetalheUltimaConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(255, 255, 255)
-                        .addComponent(jButton2)
-                        .addGap(86, 86, 86)
-                        .addComponent(jButton3)
-                        .addGap(104, 104, 104)
-                        .addComponent(jButton4)
-                        .addGap(101, 101, 101)
-                        .addComponent(jButton5)))
-                .addContainerGap(239, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(317, 317, 317)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton6)
-                .addGap(198, 198, 198))
+                        .addGap(381, 381, 381)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -263,21 +238,21 @@ public class CincoRegistrodeRetorno extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCodPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(40, 40, 40)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtData, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtHora, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(41, 41, 41)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtDetalheUltimaConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGap(56, 56, 56)
@@ -285,78 +260,14 @@ public class CincoRegistrodeRetorno extends javax.swing.JFrame {
                         .addGap(46, 46, 46)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtResultadoExames, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGap(29, 29, 29)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5))
-                .addGap(33, 33, 33))
+                        .addComponent(txtMotivoRetorno, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
         );
-
-        txtAdministrativo1.setText("Administrativo");
-
-        menuCadastroFuncionarios1.setText("Cadastro de Funcionários");
-        menuCadastroFuncionarios1.setToolTipText("");
-        txtAdministrativo1.add(menuCadastroFuncionarios1);
-
-        menuCadastroUsuarios1.setText("Cadastro de Usuários");
-        txtAdministrativo1.add(menuCadastroUsuarios1);
-
-        menuCadastroEspecialidades1.setText("Cadastro de Especialidades");
-        txtAdministrativo1.add(menuCadastroEspecialidades1);
-
-        menuCadastroMedicos1.setText("Cadastro de Médicos");
-        txtAdministrativo1.add(menuCadastroMedicos1);
-
-        menuCadastroConvenios1.setText("Cadastro de Convênios");
-        txtAdministrativo1.add(menuCadastroConvenios1);
-
-        jMenuBar1.add(txtAdministrativo1);
-
-        txtAgendamento1.setText("Agendamento");
-
-        menuCadastroPaciente1.setText("Cadastro de Pacientes");
-        menuCadastroPaciente1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuCadastroPaciente1ActionPerformed(evt);
-            }
-        });
-        txtAgendamento1.add(menuCadastroPaciente1);
-
-        menuAgendarConsulta1.setText("Agenda de Consulta");
-        txtAgendamento1.add(menuAgendarConsulta1);
-
-        menuRegistroRetorno1.setText("Registro de Retorno");
-        txtAgendamento1.add(menuRegistroRetorno1);
-
-        menuCancelamentoConsulta1.setText("Cancelamento de Consulta");
-        txtAgendamento1.add(menuCancelamentoConsulta1);
-
-        jMenuBar1.add(txtAgendamento1);
-
-        txtAtendimento1.setText("Atendimento");
-
-        menuProntuarioPaciente1.setText("Prontuário do Paciente");
-        txtAtendimento1.add(menuProntuarioPaciente1);
-
-        menuRegistroAtendimento1.setText("Registro de Atendimento");
-        txtAtendimento1.add(menuRegistroAtendimento1);
-
-        menuReceituario1.setText("Receituário");
-        txtAtendimento1.add(menuReceituario1);
-
-        menuExames1.setText("Exames");
-        txtAtendimento1.add(menuExames1);
-
-        jMenuBar1.add(txtAtendimento1);
-
-        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -374,7 +285,7 @@ public class CincoRegistrodeRetorno extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void menuCadastroPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadastroPacienteActionPerformed
-        new CadastrodePacientes().setVisible(true);
+        new TresCadastroDePaciente().setVisible(true);
     }//GEN-LAST:event_menuCadastroPacienteActionPerformed
 
     private void menuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSairActionPerformed
@@ -382,13 +293,47 @@ public class CincoRegistrodeRetorno extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_menuSairActionPerformed
 
-    private void menuCadastroPaciente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadastroPaciente1ActionPerformed
-        new CadastrodePacientes().setVisible(true);
-    }//GEN-LAST:event_menuCadastroPaciente1ActionPerformed
-
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+         //botao salvar
+        try { //Novo Cadastro
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ClinicaMedica", "root", "root");
+            String query = "INSERT INTO RegistroRetorno (codigo_paciente, nome, data, hora, detalheUltimaConsulta, motivo_retorno,  resultado_exames) "
+            
+                    + "VALUES (?,?,?,?,?,?,?)";
+            PreparedStatement pdst = con.prepareStatement(query);
+
+            pdst.setInt(1, txtCodigoPacientes.getText());
+            pdst.setString(2, txtName.getText());
+            pdst.setString(3, txtData.getText());
+            pdst.setString(4, txtHora.getText());
+            pdst.setString(5, txtDetalheUltimaConsulta.getText());
+            pdst.setString(6, txtMotivoRetorno.getText());
+            pdst.setString(7, txtResultadoExames.getText());
+           
+            
+
+            if (txtName()) {
+                pdst.setBoolean(3, true);
+            } else {
+                pdst.setBoolean(3, false);
+            }
+
+            pdst.executeUpdate();
+            pdst.close();
+            con.close();
+
+            JOptionPane.showMessageDialog(null, "Cadastrado com sucesso.");
+
+            this.dispose();
+        } catch (Exception exc) {
+            System.out.println("Algo de errado aconteceu!");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -430,10 +375,6 @@ public class CincoRegistrodeRetorno extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -443,48 +384,39 @@ public class CincoRegistrodeRetorno extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JMenuItem menuAgendarConsulta;
-    private javax.swing.JMenuItem menuAgendarConsulta1;
     private javax.swing.JMenuItem menuCadastroConvenios;
-    private javax.swing.JMenuItem menuCadastroConvenios1;
     private javax.swing.JMenuItem menuCadastroEspecialidades;
-    private javax.swing.JMenuItem menuCadastroEspecialidades1;
     private javax.swing.JMenuItem menuCadastroFuncionarios;
-    private javax.swing.JMenuItem menuCadastroFuncionarios1;
     private javax.swing.JMenuItem menuCadastroMedicos;
-    private javax.swing.JMenuItem menuCadastroMedicos1;
     private javax.swing.JMenuItem menuCadastroPaciente;
-    private javax.swing.JMenuItem menuCadastroPaciente1;
     private javax.swing.JMenuItem menuCadastroUsuarios;
-    private javax.swing.JMenuItem menuCadastroUsuarios1;
     private javax.swing.JMenuItem menuCancelamentoConsulta;
-    private javax.swing.JMenuItem menuCancelamentoConsulta1;
     private javax.swing.JMenuItem menuExames;
-    private javax.swing.JMenuItem menuExames1;
     private javax.swing.JMenuItem menuProntuarioPaciente;
-    private javax.swing.JMenuItem menuProntuarioPaciente1;
     private javax.swing.JMenuItem menuReceituario;
-    private javax.swing.JMenuItem menuReceituario1;
     private javax.swing.JMenuItem menuRegistroAtendimento;
-    private javax.swing.JMenuItem menuRegistroAtendimento1;
     private javax.swing.JMenuItem menuRegistroRetorno;
-    private javax.swing.JMenuItem menuRegistroRetorno1;
     private javax.swing.JMenu menuSair;
     private javax.swing.JMenu txtAdministrativo;
-    private javax.swing.JMenu txtAdministrativo1;
     private javax.swing.JMenu txtAgendamento;
-    private javax.swing.JMenu txtAgendamento1;
     private javax.swing.JMenu txtAtendimento;
-    private javax.swing.JMenu txtAtendimento1;
+    private javax.swing.JTextField txtCodPaciente;
+    private javax.swing.JTextField txtData;
+    private javax.swing.JTextField txtDetalheUltimaConsulta;
+    private javax.swing.JTextField txtHora;
+    private javax.swing.JTextField txtMotivoRetorno;
+    private javax.swing.JTextField txtName;
+    private javax.swing.JTextField txtResultadoExames;
     // End of variables declaration//GEN-END:variables
+
+    private void isSelected() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private boolean txtName() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

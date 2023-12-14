@@ -1,14 +1,13 @@
-package AgendamentoTelas;
-
-import Extras.AgendadeConsulta;
-import DaoAgendamento.AgendaConsultaDao;
-import javax.swing.JOptionPane;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+package AgendamentoTelas;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,7 +16,7 @@ import javax.swing.JOptionPane;
 public class QuatroAgendarConsulta extends javax.swing.JFrame {
 
     /**
-     * Creates new form AgendadeConsulta
+     * Creates new form AgendarConsulta
      */
     public QuatroAgendarConsulta() {
         initComponents();
@@ -32,157 +31,71 @@ public class QuatroAgendarConsulta extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        txtRegistroAgendamento = new javax.swing.JTextField();
+        txtCodigoUsuario = new javax.swing.JTextField();
+        txtCodigoPaciente = new javax.swing.JTextField();
+        btnSalve = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
+        txtCodigoMedico = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        txtDiaConsulta = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        txtHorarioConsulta = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        txtDiaRetorno = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        btnSalvar = new javax.swing.JButton();
-        txtPaciente = new javax.swing.JTextField();
-        boxEspecialidade = new javax.swing.JComboBox<>();
-        boxConvenio = new javax.swing.JComboBox<>();
-        boxDia = new javax.swing.JComboBox<>();
-        boxMes = new javax.swing.JComboBox<>();
-        boxAno = new javax.swing.JComboBox<>();
-        boxHora = new javax.swing.JComboBox<>();
+        txtConsultaCanncelada = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        boxMinutos = new javax.swing.JComboBox<>();
-        boxMedico = new javax.swing.JComboBox<>();
-        btnMenu = new javax.swing.JButton();
-        btnAlterar = new javax.swing.JButton();
-        btnExcluir = new javax.swing.JButton();
-        btnAgendar = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
-        txtObervacao = new javax.swing.JTextField();
-        btnCancelar = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        menuAdministrativo = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        menuAgendamento = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        menuAtendimento = new javax.swing.JMenu();
-        jMenuItem10 = new javax.swing.JMenuItem();
-        jMenuItem11 = new javax.swing.JMenuItem();
-        jMenuItem12 = new javax.swing.JMenuItem();
-        jMenuItem13 = new javax.swing.JMenuItem();
-        menuSair = new javax.swing.JMenu();
-
-        jButton1.setText("jButton1");
+        txtMotivoCancelamento = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(2, 115, 115));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 2, 24)); // NOI18N
         jLabel1.setText("AGENDAR CONSULTA");
 
-        jLabel2.setText("Paciente");
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        jLabel2.setText("Registro de Agendamento");
 
-        jLabel3.setText("Médico");
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        jLabel3.setText("Código Do Úsuario");
+        jLabel3.setToolTipText("");
 
-        jLabel4.setText("Especialidade");
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        jLabel4.setText("Código Do Paciente");
 
-        jLabel5.setText("Convênio");
-
-        jLabel6.setText("Dia");
-
-        jLabel7.setText("Mês");
-
-        jLabel8.setText("Ano");
-
-        jLabel9.setText("Hora");
-
-        btnSalvar.setText("SALVAR");
-        btnSalvar.setEnabled(false);
-
-        txtPaciente.setEnabled(false);
-
-        boxEspecialidade.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Clinico Geral", "Dermatologia", "Infectologia", "Cardiologia", "Neurologia", "Cirurgia Plástica", "Ortopedia", "Psiquiatria", "Geriatria", "Ginecologia", "Obstetrícia", "Oftalmologia", "Pediatria", "Urologia", "Otorrinolaringologia" }));
-        boxEspecialidade.setEnabled(false);
-
-        boxConvenio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Amil Assitência Médica", "Assim Saúde", "Bradesco Saúde", "Hapvida Assistência Médica", "NotreDame Intermédica", "Porto Seguro Saúde", "Prevent Senior", "Seguros Unimed Saúde", "Sistema Único de Saúde", "SulAmérica Saúde" }));
-        boxConvenio.setEnabled(false);
-
-        boxDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
-        boxDia.setEnabled(false);
-
-        boxMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro" }));
-        boxMes.setEnabled(false);
-
-        boxAno.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030" }));
-        boxAno.setEnabled(false);
-
-        boxHora.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "00" }));
-        boxHora.setEnabled(false);
-
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel10.setText(":");
-
-        boxMinutos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55" }));
-        boxMinutos.setEnabled(false);
-
-        boxMedico.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Joaquim Augusto Silva", "Lucas Gabriel Santos", "Maria Augusta Silva", "Beatriz Gabriela Santos", "Tiago Manuel Ribeiro", "Carla Eduarda Teixeira", "André Felipe Ferreira", "Tânia Manuela Ribeiro", "Daniel Francisco Costa", "Bruno Roberto Pereira", "Rafaela Henriqueta Souza", "Daniela Francisca Costa" }));
-        boxMedico.setEnabled(false);
-
-        btnMenu.setText("Menu");
-        btnMenu.addActionListener(new java.awt.event.ActionListener() {
+        btnSalve.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        btnSalve.setText("SALVAR");
+        btnSalve.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMenuActionPerformed(evt);
+                btnSalveActionPerformed(evt);
             }
         });
 
-        btnAlterar.setText("Alterar");
-        btnAlterar.setEnabled(false);
-        btnAlterar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAlterarActionPerformed(evt);
-            }
-        });
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        jLabel8.setText("Código Do Médico");
+        jLabel8.setToolTipText("");
 
-        btnExcluir.setText("Excluir");
-        btnExcluir.setEnabled(false);
-        btnExcluir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnExcluirActionPerformed(evt);
-            }
-        });
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        jLabel5.setText("Dia Da Consulta");
 
-        btnAgendar.setText("Agendar");
-        btnAgendar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                btnAgendarMouseReleased(evt);
-            }
-        });
-        btnAgendar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgendarActionPerformed(evt);
-            }
-        });
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        jLabel6.setText("Horário Da Consulta");
 
-        jLabel11.setText("Observação");
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        jLabel7.setText("Dia Do Retorno");
 
-        txtObervacao.setEnabled(false);
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        jLabel9.setText("Consulta Cancelada?");
 
-        btnCancelar.setText("Cancelar");
-        btnCancelar.setEnabled(false);
-        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelarActionPerformed(evt);
-            }
-        });
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        jLabel10.setText("Motivo Cancelamento");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -191,186 +104,90 @@ public class QuatroAgendarConsulta extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(330, 330, 330)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(257, 257, 257)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
+                        .addGap(21, 21, 21)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtCodigoUsuario)
+                            .addComponent(txtCodigoPaciente)
+                            .addComponent(txtRegistroAgendamento)
+                            .addComponent(txtCodigoMedico)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(txtDiaRetorno, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
+                                    .addComponent(txtDiaConsulta, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addGap(122, 122, 122)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtPaciente)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(boxEspecialidade, 0, 160, Short.MAX_VALUE)
-                                        .addGap(204, 204, 204))
-                                    .addComponent(boxConvenio, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(boxMedico, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(boxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(boxHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(boxMinutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(boxMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(boxAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtObervacao, javax.swing.GroupLayout.PREFERRED_SIZE, 606, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(btnAgendar)
-                                        .addGap(55, 55, 55)
-                                        .addComponent(btnAlterar)
-                                        .addGap(71, 71, 71)
-                                        .addComponent(btnExcluir)
-                                        .addGap(91, 91, 91)
-                                        .addComponent(btnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(76, 76, 76)
-                                        .addComponent(btnCancelar)))))))
-                .addGap(0, 135, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnSalvar)
-                .addGap(88, 88, 88))
+                                    .addComponent(txtHorarioConsulta)
+                                    .addComponent(txtConsultaCanncelada, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)))
+                            .addComponent(txtMotivoCancelamento)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(337, 337, 337)
+                        .addComponent(btnSalve, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(23, 23, 23)
                 .addComponent(jLabel1)
-                .addGap(8, 8, 8)
-                .addComponent(btnSalvar)
-                .addGap(28, 28, 28)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(txtPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(43, 43, 43)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(boxMedico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(jLabel2)
+                    .addComponent(txtRegistroAgendamento, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCodigoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(boxEspecialidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCodigoPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(txtCodigoMedico, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(boxConvenio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtDiaConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
+                    .addComponent(txtHorarioConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jLabel8)
-                    .addComponent(boxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(boxMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(boxAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtDiaRetorno, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9)
-                    .addComponent(boxHora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel10)
-                    .addComponent(boxMinutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(15, 15, 15)
+                    .addComponent(txtConsultaCanncelada, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(txtObervacao, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnMenu)
-                    .addComponent(btnAlterar)
-                    .addComponent(btnExcluir)
-                    .addComponent(btnAgendar)
-                    .addComponent(btnCancelar))
-                .addGap(38, 38, 38))
+                    .addComponent(txtMotivoCancelamento, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                    .addComponent(jLabel10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnSalve, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13))
         );
-
-        menuAdministrativo.setText("Administrativo");
-
-        jMenuItem1.setText("Cadastro de Funcionários");
-        menuAdministrativo.add(jMenuItem1);
-
-        jMenuItem2.setText("Cadastro de Usúarios");
-        menuAdministrativo.add(jMenuItem2);
-
-        jMenuItem3.setText("Cadastro de Especialidades");
-        menuAdministrativo.add(jMenuItem3);
-
-        jMenuItem4.setText("Cadastro de Médicos");
-        menuAdministrativo.add(jMenuItem4);
-
-        jMenuItem5.setText("Cadastro de Convênios");
-        menuAdministrativo.add(jMenuItem5);
-
-        jMenuBar1.add(menuAdministrativo);
-
-        menuAgendamento.setText("Agendamento");
-
-        jMenuItem6.setText("Cadastro de Pacientes");
-        menuAgendamento.add(jMenuItem6);
-
-        jMenuItem7.setText("Agenda de Consulta");
-        menuAgendamento.add(jMenuItem7);
-
-        jMenuItem8.setText("Registro de Retorno");
-        menuAgendamento.add(jMenuItem8);
-
-        jMenuItem9.setText("Cancelamento de Consulta");
-        menuAgendamento.add(jMenuItem9);
-
-        jMenuBar1.add(menuAgendamento);
-
-        menuAtendimento.setText("Atendimento");
-
-        jMenuItem10.setText("Prontuário do Paciente");
-        menuAtendimento.add(jMenuItem10);
-
-        jMenuItem11.setText("Registro de Atendimento");
-        menuAtendimento.add(jMenuItem11);
-
-        jMenuItem12.setText("Receituário");
-        menuAtendimento.add(jMenuItem12);
-
-        jMenuItem13.setText("Exames");
-        menuAtendimento.add(jMenuItem13);
-
-        jMenuBar1.add(menuAtendimento);
-
-        menuSair.setText("Sair");
-        menuSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuSairActionPerformed(evt);
-            }
-        });
-        jMenuBar1.add(menuSair);
-
-        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -381,87 +198,44 @@ public class QuatroAgendarConsulta extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
-new DoisAgendamento().setVisible(true);        // TODO add your handling code here:
-    }//GEN-LAST:event_btnMenuActionPerformed
+    private void btnSalveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalveActionPerformed
+         //botao salvar
+        try { //Novo Cadastro
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ClinicaMedica", "root", "root");
+            String query = "INSERT INTO AgendaConsulta (registro_agenda, codigo_usuario, codigo_paciente, codigo_medico, data, hora, retorno, cancelado, motivo_cancelamento) "
+                    + "VALUES (?,?,?,?,?,?,?,?,?)";
+            PreparedStatement pdst = con.prepareStatement(query);
 
-    private void menuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSairActionPerformed
-        // Menu sair
-        this.dispose();
-    }//GEN-LAST:event_menuSairActionPerformed
+            pdst.setInt(1, txtRegistroAgenda.getText());
+            pdst.setInt(2, txtcodigoUsuario.getText());
+            pdst.setInt(3, txtcodigoPaciente.getText());
+            pdst.setInt(4, txtcodigoMedico.getText());
+            pdst.setString(5, txtDiaConsulta.getText());
+            pdst.setString(6, txtHorarioConsulta.getText());
+            pdst.setString(7, txtDiaRetorno.getText());
+            pdst.setString(8, txtConsultaCanncelada.getText());
+            pdst.setString(9, txtMotivoCancelamento.getText());
+            
+            
 
-    private void btnAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgendarActionPerformed
-        //validar campos
-        if(txtPaciente.getText().isEmpty()== true){
-            JOptionPane.showMessageDialog(null,"Campo paciente obrigatório, por favor preencha!");
+            if (txtCodigoPaciente()) {
+                pdst.setBoolean(3, true);
+            } else {
+                pdst.setBoolean(3, false);
+            }
+
+            pdst.executeUpdate();
+            pdst.close();
+            con.close();
+
+            JOptionPane.showMessageDialog(null, "Cadastrado com sucesso.");
+
+            this.dispose();
+        } catch (Exception exc) {
+            System.out.println("Algo de errado aconteceu!");
         }
-        // botao Agendar
-        txtPaciente.setEnabled(true);
-        txtObervacao.setEnabled(true);
-        boxMedico.setEnabled(true);
-        boxEspecialidade.setEnabled(true);
-        boxConvenio.setEnabled(true);
-        boxDia.setEnabled(true);
-        boxMes.setEnabled(true);
-        boxAno.setEnabled(true);
-        boxHora.setEnabled(true);
-        boxMinutos.setEnabled(true);
-        btnAgendar.setEnabled(false);
-        btnSalvar.setEnabled(true);
-        btnAlterar.setEnabled(false);
-        btnExcluir.setEnabled(false);
-        btnCancelar.setEnabled(true);
-        txtPaciente.setText(""); //Para deixar o campo nome limpo
-       
-    }//GEN-LAST:event_btnAgendarActionPerformed
-
-    private void btnAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarActionPerformed
-        // botao Alterar
-        txtPaciente.setEnabled(true);
-        txtObervacao.setEnabled(true);
-        boxMedico.setEnabled(true);
-        boxEspecialidade.setEnabled(true);
-        boxConvenio.setEnabled(true);
-        boxDia.setEnabled(true);
-        boxMes.setEnabled(true);
-        boxAno.setEnabled(true);
-        boxHora.setEnabled(true);
-        boxMinutos.setEnabled(true);
-        btnAgendar.setEnabled(false);
-        btnSalvar.setEnabled(true);
-        btnAlterar.setEnabled(true);
-        btnExcluir.setEnabled(false);
-        btnCancelar.setEnabled(true);
-        txtPaciente.grabFocus();
-    }//GEN-LAST:event_btnAlterarActionPerformed
-
-    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        // botao Cancelar
-         txtPaciente.setEnabled(false);
-        txtObervacao.setEnabled(false);
-        boxMedico.setEnabled(false);
-        boxConvenio.setEnabled(false);
-        boxEspecialidade.setEnabled(false);
-        boxDia.setEnabled(false);
-        boxMes.setEnabled(false);
-        boxAno.setEnabled(false);
-        boxHora.setEnabled(false);
-        boxMinutos.setEnabled(false);
-        btnAgendar.setEnabled(true);
-        btnSalvar.setEnabled(false);
-        btnAlterar.setEnabled(false);
-        btnExcluir.setEnabled(false);
-        txtPaciente.setText(""); //Para deixar o campo nome limpo
-        btnAgendar.grabFocus();
-    }//GEN-LAST:event_btnCancelarActionPerformed
-
-    private void btnAgendarMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgendarMouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAgendarMouseReleased
-
-    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnExcluirActionPerformed
+    }//GEN-LAST:event_btnSalveActionPerformed
 
     /**
      * @param args the command line arguments
@@ -480,41 +254,29 @@ new DoisAgendamento().setVisible(true);        // TODO add your handling code he
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AgendadeConsulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(QuatroAgendarConsulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AgendadeConsulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(QuatroAgendarConsulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AgendadeConsulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(QuatroAgendarConsulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AgendadeConsulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(QuatroAgendarConsulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> {
-           
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new QuatroAgendarConsulta().setVisible(true);
+            }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> boxAno;
-    private javax.swing.JComboBox<String> boxConvenio;
-    private javax.swing.JComboBox<String> boxDia;
-    private javax.swing.JComboBox<String> boxEspecialidade;
-    private javax.swing.JComboBox<String> boxHora;
-    private javax.swing.JComboBox<String> boxMedico;
-    private javax.swing.JComboBox<String> boxMes;
-    private javax.swing.JComboBox<String> boxMinutos;
-    private javax.swing.JButton btnAgendar;
-    private javax.swing.JButton btnAlterar;
-    private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnExcluir;
-    private javax.swing.JButton btnMenu;
-    private javax.swing.JButton btnSalvar;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnSalve;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -523,26 +285,19 @@ new DoisAgendamento().setVisible(true);        // TODO add your handling code he
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem11;
-    private javax.swing.JMenuItem jMenuItem12;
-    private javax.swing.JMenuItem jMenuItem13;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JMenu menuAdministrativo;
-    private javax.swing.JMenu menuAgendamento;
-    private javax.swing.JMenu menuAtendimento;
-    private javax.swing.JMenu menuSair;
-    private javax.swing.JTextField txtObervacao;
-    private javax.swing.JTextField txtPaciente;
+    private javax.swing.JTextField txtCodigoMedico;
+    private javax.swing.JTextField txtCodigoPaciente;
+    private javax.swing.JTextField txtCodigoUsuario;
+    private javax.swing.JTextField txtConsultaCanncelada;
+    private javax.swing.JTextField txtDiaConsulta;
+    private javax.swing.JTextField txtDiaRetorno;
+    private javax.swing.JTextField txtHorarioConsulta;
+    private javax.swing.JTextField txtMotivoCancelamento;
+    private javax.swing.JTextField txtRegistroAgendamento;
     // End of variables declaration//GEN-END:variables
+
+    private boolean txtCodigoPaciente() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
